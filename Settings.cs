@@ -36,6 +36,19 @@ namespace RedditMegaThread
             {
                 Options.STICKY = false;
             }
+
+            string logstring = "---- read all settings:";
+            logstring += " Options.REDDIT_CLIENT_ID='" + Options.REDDIT_CLIENT_ID + "'";
+            logstring += " Options.REDDIT_CLIENT_SECRET='" + Options.REDDIT_CLIENT_SECRET + "'";
+            logstring += " Options.REDDIT_ACCESS_TOKEN='" + Options.REDDIT_ACCESS_TOKEN + "'";
+            logstring += " Options.REDDIT_REFRESH_TOKEN='" + Options.REDDIT_REFRESH_TOKEN + "'";
+            logstring += " Options.SUBREDDIT='" + Options.SUBREDDIT + "'";
+            logstring += " Options.REDDIT_POST_TITLE='" + Options.REDDIT_POST_TITLE + "'";
+            logstring += " Options.REDDIT_POST_BODY.Length='" + Options.REDDIT_POST_BODY.Length + "'";
+            logstring += " Options.DISTINGUISH='" + Options.DISTINGUISH + "'";
+            logstring += " Options.STICKY='" + Options.STICKY + "'";
+            Helper.Logger.Log(logstring);
+
         }
     }
 }

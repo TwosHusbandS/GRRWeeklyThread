@@ -24,9 +24,34 @@ namespace RedditMegaThread
         public static bool SKIPCONFIRMATION = false;
         public static string DATE = "";
 
-        public static string Logfile { get; private set; } = ProjectInstallationPath.TrimEnd('/') + @"/logfile.log";
-        public static string Configfile { get; private set; } = ProjectInstallationPath.TrimEnd('/') + @"/config.ini";
-        public static string Bodyfile { get; private set; } = ProjectInstallationPath.TrimEnd('/') + @"/body.txt";
+        public static string Logfile 
+        {
+            get
+            {
+                return Path.Combine(ProjectInstallationPath.TrimEnd(Path.DirectorySeparatorChar), @"logfile.log");
+                //ProjectInstallationPath.TrimEnd('/') + @"/logfile.log";
+            }
+        }
+
+
+        public static string Configfile
+        {
+            get
+            {
+                return Path.Combine(ProjectInstallationPath.TrimEnd(Path.DirectorySeparatorChar), @"config.ini");
+                //ProjectInstallationPath.TrimEnd('/') + @"/config.ini";
+            }
+        }
+
+
+        public static string Bodyfile
+        {
+            get
+            {
+                return Path.Combine(ProjectInstallationPath.TrimEnd(Path.DirectorySeparatorChar), @"body.txt");
+                //ProjectInstallationPath.TrimEnd('/') + @"/body.txt";
+            }
+        }
 
         public static string ProjectInstallationPath
         {

@@ -10,6 +10,12 @@ namespace RedditMegaThread.Helper
 {
     internal class TokenStuff
     {
+		// Stolen from their github https://github.com/sirkris/Reddit.NET/blob/master/docs/examples/cs/Authorize%20New%20User.md
+		// 
+		// just need to have redirect URL to be set correctly
+		// http://localhost:8765/Reddit.NET/oauthRedirect
+
+
 		string AuthorizeUser(string appId, string appSecret, int port = 8765)
 		{
 			// Create a new instance of the auth token retrieval library.  --Kris
