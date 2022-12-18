@@ -89,7 +89,7 @@ namespace RedditMegaThread.Helper
         /// <param name="pFilePath"></param>
         public static void createPathOfFile(string pFilePath)
         {
-            string path = pFilePath.Substring(0, pFilePath.LastIndexOf('\\'));
+            string path = pFilePath.Substring(0, pFilePath.LastIndexOf(Path.DirectorySeparatorChar));
             createPath(path);
         }
 
@@ -520,9 +520,9 @@ namespace RedditMegaThread.Helper
             return highDir;
         }
 
-        public static string GetParentFolder(string Path)
+        public static string GetParentFolder(string pPath)
         {
-            return Path.Substring(0, Path.TrimEnd('\\').LastIndexOf('\\'));
+            return pPath.Substring(0, pPath.TrimEnd(Path.DirectorySeparatorChar).LastIndexOf(Path.DirectorySeparatorChar));
         }
 
         /// <summary>
@@ -578,7 +578,7 @@ namespace RedditMegaThread.Helper
         /// <returns></returns>
         public static string PathCombine(string pPath, string pFile)
         {
-            return pPath.TrimEnd('\\') + @"\" + pFile;
+            return pPath.TrimEnd(Path.DirectorySeparatorChar) + Path.DirectorySeparatorChar + pFile;
         }
 
         /// <summary>
@@ -589,8 +589,8 @@ namespace RedditMegaThread.Helper
         public static string[] PathSplitUp(string pFilePath)
         {
             string[] rtrn = new string[2];
-            rtrn[0] = pFilePath.Substring(0, pFilePath.LastIndexOf('\\'));
-            rtrn[1] = pFilePath.Substring(pFilePath.LastIndexOf('\\') + 1);
+            rtrn[0] = pFilePath.Substring(0, pFilePath.LastIndexOf(Path.DirectorySeparatorChar));
+            rtrn[1] = pFilePath.Substring(pFilePath.LastIndexOf(Path.DirectorySeparatorChar) + 1);
             return rtrn;
         }
 
@@ -603,7 +603,7 @@ namespace RedditMegaThread.Helper
         {
             if (doesFileExist(pFilePathSource))
             {
-                string pFilePathDest = PathSplitUp(pFilePathSource)[0].TrimEnd('\\') + @"\" + pFileNameDest;
+                string pFilePathDest = PathSplitUp(pFilePathSource)[0].TrimEnd(Path.DirectorySeparatorChar) + Path.DirectorySeparatorChar + pFileNameDest;
                 try
                 {
                     //FileHandling.AddToDebug("Renaming: '" + pFilePathSource + "' to '" + pFilePathDest + "'.");
