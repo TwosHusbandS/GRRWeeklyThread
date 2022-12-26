@@ -17,6 +17,7 @@ namespace RedditMegaThread
         public static bool DISTINGUISH = true;
         public static bool STICKY = false;
         public static string SUBREDDIT = "";
+        public static string FLAIR = "";
         public static string REDDIT_POST_TITLE = "";
         public static string REDDIT_POST_BODY = "";
 

@@ -66,6 +66,11 @@ namespace RedditMegaThread
 
                 // Submitting the actual post.
                 SelfPost SP = SR.SelfPost(Options.REDDIT_POST_TITLE, Options.REDDIT_POST_BODY).Submit();
+                if (!String.IsNullOrWhiteSpace(Options.FLAIR))
+                {
+                    Helper.Logger.Log("---- We have a flair in settings: '" + Options.FLAIR + "' ...");
+                    SP.SetFlair(Options.FLAIR);
+                }    
             
                 if (Options.DISTINGUISH)
                 {

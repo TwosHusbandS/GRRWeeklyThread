@@ -70,6 +70,7 @@ Posts weekly discussion threads for the latest music in the /r/GermanRapReddit s
 * REDDIT_REFRESH_TOKEN (string)
 * DISTINGUISH (string either "True" or "False")
 * STICKY (string either "True" or "False")
+* FLAIR (string)
 * SUBREDDIT (string either "True" or "False")
 * TITLE (string with placeholder %CURRENT_DATE%)
 

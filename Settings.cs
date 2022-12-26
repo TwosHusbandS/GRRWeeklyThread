@@ -18,6 +18,7 @@ namespace RedditMegaThread
             Options.REDDIT_ACCESS_TOKEN = Helper.FileHandling.GetXMLTagContent(configFileContent, "REDDIT_ACCESS_TOKEN");
             Options.REDDIT_REFRESH_TOKEN = Helper.FileHandling.GetXMLTagContent(configFileContent, "REDDIT_REFRESH_TOKEN");
             Options.SUBREDDIT = Helper.FileHandling.GetXMLTagContent(configFileContent, "SUBREDDIT");
+            Options.FLAIR = Helper.FileHandling.GetXMLTagContent(configFileContent, "FLAIR");
             Options.REDDIT_POST_TITLE = Helper.FileHandling.GetXMLTagContent(configFileContent, "TITLE");
             Options.REDDIT_POST_BODY = bodyFileContent;
             if (Helper.FileHandling.GetXMLTagContent(configFileContent, "DISTINGUISH").ToUpper() == "FALSE")
